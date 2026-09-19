@@ -1,0 +1,22 @@
+title: William Jones
+description: Writing, videos, and projects by William Jones.
+url: "https://willjones-0.github.io"
+baseurl: ""
+author: William Jones
+timezone: Europe/London
+permalink: /writing/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      category: writing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

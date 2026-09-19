@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="shell">
+      {% include header.html %}
+      <main id="content">{{ content }}</main>
+      <footer><span>© {{ 'now' | date: '%Y' }} {{ site.author }}</span><a href="{{ '/feed.xml' | relative_url }}">RSS</a></footer>
+    </div>
+  </body>
+</html>
