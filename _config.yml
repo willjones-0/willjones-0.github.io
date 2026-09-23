@@ -1,9 +1,9 @@
 title: William Jones
-description: Writing, videos, and projects by William Jones.
+description: The website of William Jones.
 url: "https://willjones-0.github.io"
 baseurl: ""
 author: William Jones
-timezone: Europe/London
+timezone: London
 permalink: /writing/:title/
 plugins:
   - jekyll-feed
