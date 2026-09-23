@@ -1,11 +1,9 @@
 ---
 title: My first post
-description: A short first note, and a test of the new publishing system.
+description: 
 reading_time: 1
 ---
-This is my first post.
 
-This is another paragraph. Eventually, this is where the actual essay will go.
 
 ## A section heading
 
