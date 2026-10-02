@@ -66,12 +66,75 @@ footer { display:flex; justify-content:space-between; padding:1.6rem 0 2.5rem; c
   .compact-grid { grid-template-columns:1fr; }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
-blockquote {
-    margin: 1.5rem 0;
-    padding: 0.5rem 0 0.5rem 1.25rem;
-    border-left: 3px solid #ddd;
-}
 
-blockquote p {
-    margin: 0.4rem 0;
+/* Quotations */
+.prose blockquote {
+  margin: 2rem 0;
+  padding: .45rem 0 .45rem 1.25rem;
+  color: #4e4b46;
+  border-left: 3px solid var(--line);
+}
+.prose blockquote p { margin: .4rem 0; }
+
+/* Kramdown footnotes */
+.prose a.footnote,
+.prose a[rel~="footnote"] {
+  font: 600 .68em var(--sans);
+  text-decoration: none;
+  vertical-align: super;
+  line-height: 0;
+}
+.prose a.footnote::before,
+.prose a[rel~="footnote"]::before { content: "["; }
+.prose a.footnote::after,
+.prose a[rel~="footnote"]::after { content: "]"; }
+
+.prose .footnotes {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .88rem;
+}
+.prose .footnotes::before {
+  content: "Notes";
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--ink);
+  font: 700 .82rem var(--sans);
+  letter-spacing: .03em;
+}
+.prose .footnotes ol { padding-left: 1.4rem; }
+.prose .footnotes li { padding-left: .35rem; }
+.prose .footnotes li p { margin-bottom: .7rem; }
+.prose .reversefootnote { font: 600 .75rem var(--sans); text-decoration: none; }
+
+/* LessWrong-style margin notes on wide screens.
+   JavaScript copies each normal footnote beside its reference.
+   The original footnote list remains the fallback on narrower screens. */
+.sidenote { display: none; }
+
+@media (min-width: 1180px) {
+  .prose { position: relative; }
+
+  .prose.has-sidenotes .footnotes { display: none; }
+
+  .sidenote {
+    display: inline-block;
+    position: absolute;
+    left: calc(100% + 2.25rem);
+    width: 235px;
+    margin-top: -.15em;
+    color: var(--muted);
+    font: 400 .78rem/1.5 var(--serif);
+    vertical-align: baseline;
+  }
+
+  .sidenote-number {
+    margin-right: .45em;
+    color: var(--accent);
+    font: 600 .72rem var(--sans);
+  }
+
+  .sidenote p { display: inline; margin: 0; }
 }
