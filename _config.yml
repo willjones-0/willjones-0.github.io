@@ -3,7 +3,8 @@ description: The website of William Jones.
 url: "https://willjones-0.github.io"
 baseurl: ""
 author: William Jones
-timezone: London
+timezone: Europe/London
+markdown: kramdown
 permalink: /writing/:title/
 plugins:
   - jekyll-feed
