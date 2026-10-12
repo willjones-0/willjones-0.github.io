@@ -4,7 +4,7 @@ title: Home
 ---
 <section class="hero">
   <h1>William Jones</h1>
-  <p class="lede">Writing, videos, and projects.</p>
+  <p> I am </p>
 </section>
 <section class="home-section">
   <div class="compact-grid">
