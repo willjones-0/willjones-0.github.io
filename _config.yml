@@ -7,7 +7,6 @@ timezone: Europe/London
 markdown: kramdown
 permalink: /writing/:title/
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 defaults:

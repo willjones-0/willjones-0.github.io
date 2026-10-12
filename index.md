@@ -3,14 +3,14 @@ layout: default
 title: Home
 ---
 <section class="hero">
+  <h1>William Jones</h1>
+  <p class="lede">Writing, videos, and projects.</p>
 </section>
 <section class="home-section">
-  <div class="section-heading"><h2>Latest writing</h2><a href="{{ '/writing/' | relative_url }}">View all</a></div>
-  {% if site.posts.size > 0 %}
-  <ol class="item-list">
-    {% for post in site.posts limit: 4 %}
-    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time><div><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>{% if post.description %}<p>{{ post.description }}</p>{% endif %}</div></li>
-    {% endfor %}
-  </ol>
-  {% else %}<p class="empty-state"></p>{% endif %}
+  <div class="compact-grid">
+    <a class="feature-link" href="{{ '/writing/' | relative_url }}"><span>Writing</span><small>Essays on Substack →</small></a>
+    <a class="feature-link external-link" href="https://www.youtube.com/@WilliamJones11D"><span>Videos</span><small>Watch on YouTube →</small></a>
+    <a class="feature-link" href="{{ '/projects/' | relative_url }}"><span>Projects</span><small>Things I’ve made →</small></a>
+    <a class="feature-link" href="{{ '/about/' | relative_url }}"><span>About</span><small>More about me →</small></a>
+  </div>
 </section>
